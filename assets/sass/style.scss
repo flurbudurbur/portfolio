@@ -3,7 +3,8 @@
 :root {
     --primary: hsl(0, 0%, 10%);
     --secondary: hsl(0, 0%, 100%);
-    --font-color: hsl(0, 0%, 100%);
+    --font-clr-1: hsl(0, 0%, 100%);
+    --font-clr-2: hsl(0, 0%, 0%);
     --accent-clr: hsl(327, 52%, 32%);
     --font-family: 'Rubik', sans-serif;
 }
@@ -12,4 +13,103 @@
     font-family: var(--font-family);
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
+
+.header {
+    padding: 1.2rem 0;
+    background-color: var(--primary);
+}
+
+.topNav {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 3rem;
+
+    .logo {
+        max-width: 5rem;
+        max-height: 5rem;
+        min-width: 3rem;
+        min-height: 3rem;
+
+        margin-left: 3rem;
+    }
+}
+
+#navHeader {
+    list-style: none;
+    display: flex;
+    align-items: center;
+
+    .navListItem {
+        display: flex;
+        margin: 0 1em;
+        justify-content: center;
+        position: relative;
+        
+        .underline {
+            position: absolute;
+            display: block;
+            width: 0%;
+            height: 3px;
+            background: var(--primary);
+            top: 2.45rem;
+            transition: cubic-bezier(1,0,0,1) width 300ms;
+        }
+
+        &:hover > .navButtonWrapper > .navBtn {
+            padding-left: 3rem;
+        }
+
+        &:hover > .underline {
+                width: 87%;
+        }
+
+        &:hover > .navButtonWrapper > .navIcons {
+            transform: translateX(0.7rem);
+            opacity: 1;
+        }
+    }
+}
+
+.navButtonWrapper {
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    .navIcons {
+        max-height: 1.8em;
+        max-width: 1.8em;
+        position: absolute;
+        opacity: 0;
+        transform: translateX(0);
+        transition: opacity cubic-bezier(1,0,0,1) 300ms,
+                    transform cubic-bezier(1,0,0,1) 300ms;
+    }
+}
+
+.navBtn {
+    font-size: 1.1rem;
+    color: var(--font-clr-2);
+    text-decoration: none;
+    background-color: var(--secondary);
+    padding: 0.75em;
+    border-radius: 0.25em;;
+    transition: padding-left cubic-bezier(1,0,0,1) 300ms;
+}
+
+.active {
+    .navIcons {
+        opacity: 1;
+        transform: translateX(0.7rem);
+    }
+    .navBtn {
+        padding-left: 3rem;
+    }
+    .underline {
+        width: 87%;
+    }
+}
+
+
+
