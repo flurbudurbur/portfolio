@@ -99,4 +99,19 @@
   width: 87%;
 }
 
+.eyeCandy {
+  position: relative;
+}
+.eyeCandy .imgCode {
+  position: absolute;
+  mask-image: url(/assets/images/mask.png);
+  mask-repeat: no-repeat;
+  mask-size: 100rem;
+}
+
+.redirect {
+  color: var(--primary);
+  text-decoration: underline var(--accent-clr) 3px;
+}
+
 /*# sourceMappingURL=style.css.map */
