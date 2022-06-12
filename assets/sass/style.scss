@@ -113,16 +113,53 @@
 
 .eyeCandy {
     position: relative;
+    display: flex;
+    place-content: center;
+
+    
 
     .imgCode {
-        position: absolute;
         mask-image: url(/assets/images/mask.png);
         mask-repeat: no-repeat;
         mask-size: 100rem;
+        mask-position: 0 -30vh;
+        object-fit: cover;
+        max-height: 35rem;
+
+        // position: absolute;
+        // top: 0;
+        // right: 0;
+    }
+}
+
+.aboutMe {
+    margin: auto;
+    // transform: translate(-20vw,-10vh);
+
+    h1 {
+        font-size: 4rem;
+        line-height: 90%;
+    }
+    
+    p {
+        font-size: 2rem;
+        margin-top: 1rem;
+        line-height: 90%;
+    }
+    
+    a {
+        font-size: 1.2rem;
+        margin-top: 1rem;
     }
 }
 
 .redirect {
     color: var(--primary);
     text-decoration: underline var(--accent-clr) 3px;
+}
+
+.funcTab {
+    border-radius: 0 0 4rem 4rem;
+    // background:hsl(143, 52%, 32%);
+    min-height: 35em;
 }

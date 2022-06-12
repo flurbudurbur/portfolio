@@ -101,17 +101,43 @@
 
 .eyeCandy {
   position: relative;
+  display: flex;
+  place-content: center;
 }
 .eyeCandy .imgCode {
-  position: absolute;
   mask-image: url(/assets/images/mask.png);
   mask-repeat: no-repeat;
   mask-size: 100rem;
+  mask-position: 0 -30vh;
+  object-fit: cover;
+  max-height: 35rem;
+}
+
+.aboutMe {
+  margin: auto;
+}
+.aboutMe h1 {
+  font-size: 4rem;
+  line-height: 90%;
+}
+.aboutMe p {
+  font-size: 2rem;
+  margin-top: 1rem;
+  line-height: 90%;
+}
+.aboutMe a {
+  font-size: 1.2rem;
+  margin-top: 1rem;
 }
 
 .redirect {
   color: var(--primary);
   text-decoration: underline var(--accent-clr) 3px;
+}
+
+.funcTab {
+  border-radius: 0 0 4rem 4rem;
+  min-height: 35em;
 }
 
 /*# sourceMappingURL=style.css.map */
