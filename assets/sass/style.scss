@@ -176,3 +176,8 @@
 .mainBg {
     background: var(--primary);
 }
+
+#github::before {
+    margin-left: 32px;
+    content:url(assets/images/icons/GitHub-Mark/PNG/GitHub-Mark-32px.png);
+}
