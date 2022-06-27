@@ -122,14 +122,14 @@
     }
 
     .imgCode {
-        mask-image: url(/assets/images/mask.png);
-        mask-repeat: no-repeat;
-        mask-size: 100rem;
-        mask-position: 0 -30vh;
         -webkit-mask-image: url(/assets/images/mask.png);
         -webkit-mask-repeat: no-repeat;
         -webkit-mask-size: 100rem;
-        -webkit-mask-position: 0 -30vh;
+        -webkit-mask-position: 0 -20rem;
+        mask-image: url(/assets/images/mask.png);
+        mask-repeat: no-repeat;
+        mask-size: 100rem;
+        mask-position: 0 -20rem;
 
         object-fit: cover;
         max-height: 35rem;
@@ -177,7 +177,17 @@
     background: var(--primary);
 }
 
+.footerLinks {
+    display: flex;
+    flex-direction: column;
+}
+
 #github::before {
-    margin-left: 32px;
-    content:url(assets/images/icons/GitHub-Mark/PNG/GitHub-Mark-32px.png);
+    content:url(../images/icons/GitHub-Mark/PNG/GitHub-Mark-32px.png);
+}
+
+#emailMe::before {
+    content:url(../images/icons/at-solid.svg);
+    width: 32px;
+    height: 32px;
 }

@@ -109,14 +109,14 @@
   max-height: 35rem;
 }
 .eyeCandy .imgCode {
-  mask-image: url(/assets/images/mask.png);
-  mask-repeat: no-repeat;
-  mask-size: 100rem;
-  mask-position: 0 -30vh;
   -webkit-mask-image: url(/assets/images/mask.png);
   -webkit-mask-repeat: no-repeat;
   -webkit-mask-size: 100rem;
-  -webkit-mask-position: 0 -30vh;
+  -webkit-mask-position: 0 -20rem;
+  mask-image: url(/assets/images/mask.png);
+  mask-repeat: no-repeat;
+  mask-size: 100rem;
+  mask-position: 0 -20rem;
   object-fit: cover;
   max-height: 35rem;
   border-bottom-right-radius: 3.97rem;
@@ -153,4 +153,19 @@
   background: var(--primary);
 }
 
-/*# sourceMappingURL=style.css.map */
+.footerLinks {
+  display: flex;
+  flex-direction: column;
+}
+
+#github::before {
+  content: url(../images/icons/GitHub-Mark/PNG/GitHub-Mark-32px.png);
+}
+
+#emailMe::before {
+  content: url(../images/icons/at-solid.svg);
+  width: 32px;
+  height: 32px;
+}
+
+/*# sourceMappingURL=style.v1.css.map */
